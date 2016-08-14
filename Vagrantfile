@@ -16,10 +16,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.network "forwarded_port", guest: 5000, host: 5000
 
-  # If true, then any SSH connections made will enable agent forwarding.
-  # Default value: false
-  config.ssh.forward_agent = true
-
   config.vm.synced_folder ".", "/vagrant"
 
   # build flask env
